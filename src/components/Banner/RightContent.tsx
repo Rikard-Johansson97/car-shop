@@ -23,20 +23,21 @@ const specs = [
   {
     value: 1.99,
     measure: "s",
-    icon: <ShutterSpeedOutlinedIcon style={{ color: "#74d149" }} />,
+
+    icon: <TimerOutlinedIcon style={{ color: "#ebb259" }} />,
     title: "0-60 mph",
   },
   {
     value: 1022,
     measure: "HP",
-    icon: <TimerOutlinedIcon style={{ color: "#ebb259" }} />,
+    icon: <ShutterSpeedOutlinedIcon style={{ color: "#74d149" }} />,
     title: "Horse Power",
   },
 ];
 
 const RightContent: FC<RightContentProps> = ({}) => {
   return (
-    <div className='grid grid-cols-2 gap-4 w-full'>
+    <div className='grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 gap-4 w-full'>
       {specs.map((spec) => (
         <div
           key={spec.title}

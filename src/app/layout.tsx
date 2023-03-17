@@ -16,11 +16,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className='bg-bg'>
         <Header />
-        <div className='flex flex-col max-w-[1720px] mx-auto'>
-          <div className='flex-1'>
-            <Banner />
-          </div>
-        </div>
+
         {children}
       </body>
     </html>

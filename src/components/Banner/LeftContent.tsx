@@ -16,12 +16,9 @@ const LeftContent: FC<LeftContentProps> = ({}) => {
           <h1 className=''>BUGATTI</h1>
           <span className='font-bold'>VEYRON 16.4</span>
         </div>
-        <p className='text-sm'>
-          Discover unparalleled luxury and performance in the Bugatti Veyron
-          16.4, featuring a striking design and breathtaking speed.
-        </p>
+        <p className='text-sm'>{/* summary */}</p>
 
-        <p className='font-semibold'>$ 290.000</p>
+        <p className='font-semibold'>{}</p>
         <button
           type='button'
           className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 duration-200 hover:brightness-105  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 shadow-md'>
