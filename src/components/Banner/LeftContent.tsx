@@ -5,7 +5,7 @@ interface LeftContentProps {}
 
 const LeftContent: FC<LeftContentProps> = ({}) => {
   return (
-    <div className='w-full max-w-[270px]  sm:max-w-xs md:max-w-sm  flex items-center justify-center '>
+    <div className='w-full max-w-[270px]  sm:max-w-xs md:max-w-sm  flex items-center justify-center animate-fade-right'>
       <div className='flex flex-col gap-4 p-4'>
         <div className='bg-black rounded-full w-24 flex justify-center shadow-sm'>
           <p className='text-sm bg-black rounded-full text-white p-1'>
