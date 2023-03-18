@@ -11,7 +11,7 @@ interface BannerProps {
 const Banner: FC<BannerProps> = ({ car }) => {
   return (
     <div>
-      <div className=' flex justify-between items-center min-h-screen'>
+      <div className=' flex justify-between items-center'>
         <LeftContent car={car} />
         <div className='flex-1 relative xl:static right-0 animate-fade-up flex justify-center w-full max-h-screen'>
           <Image

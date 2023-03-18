@@ -24,6 +24,16 @@ interface Car {
   topSpeed: number;
   weight: number;
   year: number;
+  design: {
+    title: string;
+    description: string;
+    image: string;
+  };
+  performance: {
+    title: string;
+    description: string;
+    image: string;
+  };
 }
 
 interface CarList {
