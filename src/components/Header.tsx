@@ -23,6 +23,8 @@ const Header: FC<HeaderProps> = ({}) => {
           alt='bugatti-brand'
           width={94}
           height={94}
+          className='w-24'
+          priority
         />
       </div>
       <div className='hidden lg:flex flex-1  gap-6 justify-end font-semibold text-gray-500'>

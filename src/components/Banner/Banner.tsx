@@ -5,30 +5,30 @@ import LeftContent from "./LeftContent";
 import RightContent from "./RightContent";
 
 interface BannerProps {
-  image: string;
+  car: Car;
 }
 
-const Banner: FC<BannerProps> = ({ image }) => {
+const Banner: FC<BannerProps> = ({ car }) => {
   return (
     <div>
-      <div className=' flex justify-between items-center flex-1 min-h-screen'>
-        <LeftContent />
-        <div className='absolute xl:static sm:right-0 animate-fade-up'>
+      <div className=' flex justify-between items-center min-h-screen'>
+        <LeftContent car={car} />
+        <div className='flex-1 relative xl:static right-0 animate-fade-up flex justify-center w-full max-h-screen'>
           <Image
-            src={urlFor(image).url()}
-            alt='image'
+            src={urlFor(car.image).url()}
+            alt='bugatti-image'
             width='0'
             height='0'
             sizes='100vw'
-            className=' w-full rotate-90 overflow-hidden object-contain'
+            className=' w-full overflow-hidden object-contain'
           />
         </div>
-        <div className=' w-full max-w-sm  hidden  xl:flex items-center justify-center p-8 animate-fade-left'>
-          <RightContent />
+        <div className='flex-1 w-full max-w-sm  hidden  xl:flex items-center justify-center p-8 animate-fade-left'>
+          <RightContent car={car} />
         </div>
       </div>
       <div className='relative xl:hidden flex p-4 z-50 animate-fade-up'>
-        <RightContent />
+        <RightContent car={car} />
       </div>
     </div>
   );

@@ -5,37 +5,39 @@ import DirectionsCarFilledOutlinedIcon from "@mui/icons-material/DirectionsCarFi
 import ShutterSpeedOutlinedIcon from "@mui/icons-material/ShutterSpeedOutlined";
 import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
 
-interface RightContentProps {}
+interface RightContentProps {
+  car: Car;
+}
 
-const specs = [
-  {
-    value: 200,
-    measure: "MPH",
-    icon: <SpeedIcon style={{ color: "#304ffd" }} />,
-    title: "Top Speed",
-  },
-  {
-    value: 4561,
-    measure: "lbs",
-    icon: <DirectionsCarFilledOutlinedIcon style={{ color: "#ab55ed" }} />,
-    title: "Weight",
-  },
-  {
-    value: 1.99,
-    measure: "s",
+const RightContent: FC<RightContentProps> = ({ car }) => {
+  const specs = [
+    {
+      value: car.topSpeed,
+      measure: "MPH",
+      icon: <SpeedIcon style={{ color: "#304ffd" }} />,
+      title: "Top Speed",
+    },
+    {
+      value: car.weight,
+      measure: "lbs",
+      icon: <DirectionsCarFilledOutlinedIcon style={{ color: "#ab55ed" }} />,
+      title: "Weight",
+    },
+    {
+      value: car.acceleration,
+      measure: "s",
 
-    icon: <TimerOutlinedIcon style={{ color: "#ebb259" }} />,
-    title: "0-60 mph",
-  },
-  {
-    value: 1022,
-    measure: "HP",
-    icon: <ShutterSpeedOutlinedIcon style={{ color: "#74d149" }} />,
-    title: "Horse Power",
-  },
-];
+      icon: <TimerOutlinedIcon style={{ color: "#ebb259" }} />,
+      title: "0-60 mph",
+    },
+    {
+      value: car.engine.power,
+      measure: "HP",
+      icon: <ShutterSpeedOutlinedIcon style={{ color: "#74d149" }} />,
+      title: "Horse Power",
+    },
+  ];
 
-const RightContent: FC<RightContentProps> = ({}) => {
   return (
     <div className='grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 gap-4 w-full'>
       {specs.map((spec) => (

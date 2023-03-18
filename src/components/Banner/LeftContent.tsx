@@ -1,22 +1,26 @@
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import React, { FC } from "react";
 
-interface LeftContentProps {}
+interface LeftContentProps {
+  car: Car;
+}
 
-const LeftContent: FC<LeftContentProps> = ({}) => {
+const LeftContent: FC<LeftContentProps> = ({ car }) => {
   return (
-    <div className='w-full max-w-[270px]  sm:max-w-xs md:max-w-sm  flex items-center justify-center animate-fade-right'>
+    <div className='flex-1 w-full max-w-[270px]  sm:max-w-xs md:max-w-sm  flex items-center justify-center animate-fade-right'>
       <div className='flex flex-col gap-4 p-4'>
         <div className='bg-black rounded-full w-24 flex justify-center shadow-sm'>
-          <p className='text-sm bg-black rounded-full text-white p-1'>
-            Sports Car
+          <p className='text-sm bg-black rounded-full text-white p-1 uppercase'>
+            {car.category}
           </p>
         </div>
         <div className='flex flex-col text-5xl'>
-          <h1 className=''>BUGATTI</h1>
-          <span className='font-bold'>VEYRON 16.4</span>
+          <h1 className='uppercase'>{car.make}</h1>
+          <span className='font-bold uppercase'>
+            {`${car.model} ${car.engine.type}`}
+          </span>
         </div>
-        <p className='text-sm'>{/* summary */}</p>
+        <p className='text-sm'>{car.summary}</p>
 
         <p className='font-semibold'>{}</p>
         <button

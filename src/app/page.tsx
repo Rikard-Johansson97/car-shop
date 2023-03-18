@@ -9,8 +9,8 @@ export default async function Home() {
   const car: Car[] = await client.fetch(query);
 
   return (
-    <main className='max-w-[1720px] mx-auto'>
-      <Banner image={car[0].image} />
+    <main className='max-w-[1400px] mx-auto'>
+      <Banner car={car[0]} />
       <Slider images={car[0].showcase} />
     </main>
   );
