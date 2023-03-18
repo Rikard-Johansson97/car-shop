@@ -3,6 +3,7 @@ interface Engine {
   power: number;
   torque: number;
   type: string;
+  image: string;
 }
 
 interface Car {

@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner";
+import EngineSpecs from "@/components/EngineSpecs";
 import CarFeature from "@/components/Features/Feature";
 import FeatureLayout from "@/components/Features/FeatureLayout";
 import Slider from "@/components/Slider";
@@ -15,6 +16,7 @@ export default async function Home() {
       <Banner car={car[0]} />
       <Slider images={car[0].showcase} />
       <FeatureLayout car={car[0]} />
+      <EngineSpecs engine={car[0].engine} />
     </main>
   );
 }
