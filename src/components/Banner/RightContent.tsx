@@ -4,6 +4,7 @@ import SpeedIcon from "@mui/icons-material/Speed";
 import DirectionsCarFilledOutlinedIcon from "@mui/icons-material/DirectionsCarFilledOutlined";
 import ShutterSpeedOutlinedIcon from "@mui/icons-material/ShutterSpeedOutlined";
 import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
+import CountUp from "react-countup";
 
 interface RightContentProps {
   car: Car;
@@ -49,7 +50,11 @@ const RightContent: FC<RightContentProps> = ({ car }) => {
           </div>
 
           <h3 className='font-bold'>
-            {spec.value}
+            <CountUp
+              start={0}
+              end={spec.value}
+              decimals={spec.measure === "s" ? 1 : 0}
+            />
             {spec.measure}
           </h3>
           <p className='text-xs text-gray-500'>{spec.title}</p>
