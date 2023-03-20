@@ -7,8 +7,7 @@ interface HeaderProps {}
 
 const navLinks = [
   { title: "Specs", href: "#specs" },
-  { title: "Order", href: "#order" },
-  { title: "Cart", href: "/cart" },
+  { title: "Order", href: "#contact" },
 ];
 
 const Header: FC<HeaderProps> = ({}) => {
@@ -29,7 +28,7 @@ const Header: FC<HeaderProps> = ({}) => {
       </div>
       <div className='hidden lg:flex flex-1  gap-6 justify-end font-semibold text-gray-500'>
         {navLinks.map((link) => (
-          <Link key={link.title} href={link.href}>
+          <Link key={link.title} href={link.href} scroll={false}>
             {link.title}
           </Link>
         ))}
