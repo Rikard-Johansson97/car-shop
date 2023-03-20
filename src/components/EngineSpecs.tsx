@@ -15,19 +15,19 @@ const EngineSpecs: FC<EngineSpecsProps> = ({ engine }) => {
 
   return (
     <div className='flex py-10 px-4'>
-      <div className='flex-1 flex flex-col items-center justify-evenly'>
-        <div className='flex flex-col'>
-          <h3 className='text-2xl font-bold'>
+      <div className='engineSpec '>
+        <div className='flex flex-col primaryGradient max-w-[250px] p-2 w-full rounded-lg shadow'>
+          <h3 className='text-sm md:text-2xl font-bold'>
+            W
             <CountUp start={0} end={16} />
-            -CYLINDER
           </h3>
-          <p className='text-xs text-gray-700'>W CONFIGURATION</p>
+          <p className='text-xs text-gray-700'>W Config</p>
         </div>
-        <div className='flex flex-col'>
-          <h3 className='text-2xl font-bold'>
+        <div className='flex flex-col primaryGradient max-w-[250px] p-2 w-full rounded-lg shadow'>
+          <h3 className='text-sm font-bold md:text-2xl'>
             <CountUp start={0} end={displacement} decimals={1} /> L
           </h3>
-          <p className='text-xs text-gray-700'>W CONFIGURATION</p>
+          <p className='text-xs text-gray-700'>Displacement</p>
         </div>
       </div>
       <div className='flex-1 h-full'>
@@ -36,18 +36,18 @@ const EngineSpecs: FC<EngineSpecsProps> = ({ engine }) => {
           alt='engine-image'
           width={1000}
           height={1000}
-          className='drop-shadow-lg'
+          className='relative  drop-shadow-lg px-2'
         />
       </div>
-      <div className='flex-1 flex flex-col items-center justify-evenly divide-solid text-start'>
-        <div className='flex flex-col'>
-          <h3 className='text-2xl font-bold'>
+      <div className='engineSpec '>
+        <div className='flex flex-col primaryGradient w-full max-w-[250px] p-2  rounded-lg shadow'>
+          <h3 className='text-sm font-bold md:text-2xl'>
             <CountUp start={0} end={engine.power} /> HP
           </h3>
           <p className='text-xs text-gray-700'>Horse Power</p>
         </div>
-        <div className='flex flex-col'>
-          <h3 className='text-2xl font-bold'>
+        <div className='flex flex-col primaryGradient max-w-[250px] p-2 w-full rounded-lg shadow'>
+          <h3 className='text-sm font-bold md:text-2xl'>
             <CountUp start={0} end={engine.torque} /> Nm
           </h3>
           <p className='text-xs text-gray-700'>Torque</p>

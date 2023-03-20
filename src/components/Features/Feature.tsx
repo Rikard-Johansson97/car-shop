@@ -6,18 +6,17 @@ interface FeatureProps {
   image: string;
   title: string;
   description: string;
-  reverse?: boolean;
+  className?: string; // optional className prop
 }
 
 const Feature: FC<FeatureProps> = ({
   image,
   title,
   description,
-  reverse = false,
+  className,
 }) => {
-  const flexDirection = reverse ? "flex-row-reverse" : "flex-row";
   return (
-    <div className={`flex flex-col md:${flexDirection} p-4`}>
+    <div className={`flex flex-col ${className} p-4`}>
       <div className='flex-1 flex'>
         <Image
           src={urlFor(image).url()}

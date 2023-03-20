@@ -13,6 +13,7 @@ const FeatureLayout: FC<FeatureLayoutProps> = ({ car }) => {
           title={car.design.title}
           description={car.design.description}
           image={car.design.image}
+          className='md:flex-row'
         />
       </div>
       <div className='animate-fade-left'>
@@ -20,7 +21,7 @@ const FeatureLayout: FC<FeatureLayoutProps> = ({ car }) => {
           title={car.performance.title}
           description={car.performance.description}
           image={car.performance.image}
-          reverse={true}
+          className='md:flex-row-reverse'
         />
       </div>
     </div>

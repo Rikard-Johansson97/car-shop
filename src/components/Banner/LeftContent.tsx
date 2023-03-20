@@ -1,4 +1,6 @@
-import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+"use client";
+
+import Link from "next/link";
 import React, { FC } from "react";
 
 interface LeftContentProps {
@@ -23,11 +25,11 @@ const LeftContent: FC<LeftContentProps> = ({ car }) => {
         <p className='text-sm'>{car.summary}</p>
 
         <p className='font-semibold'>{}</p>
-        <button
-          type='button'
+        <Link
+          href='/#contact'
           className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 duration-200 hover:brightness-105  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 shadow-md'>
           Order Now
-        </button>
+        </Link>
       </div>
     </div>
   );

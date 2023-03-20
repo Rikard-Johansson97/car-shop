@@ -13,7 +13,7 @@ const navLinks = [
 
 const Header: FC<HeaderProps> = ({}) => {
   return (
-    <nav className='bg-transparent absolute flex justify-between items-center w-full px-8 py-4 sm:px z-50 '>
+    <nav className='bg-transparent relative flex justify-between items-center w-full px-8 py-4 sm:px z-50  '>
       <div className='flex-1 text-gray-500 cursor-pointer'>
         <Bars2Icon className='w-10' />
       </div>

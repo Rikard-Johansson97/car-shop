@@ -1,6 +1,6 @@
 import Banner from "@/components/Banner/Banner";
+import ContactForm from "@/components/ContactForm";
 import EngineSpecs from "@/components/EngineSpecs";
-import CarFeature from "@/components/Features/Feature";
 import FeatureLayout from "@/components/Features/FeatureLayout";
 import Slider from "@/components/Slider";
 import { groq } from "next-sanity";
@@ -17,6 +17,7 @@ export default async function Home() {
       <Slider images={car[0].showcase} />
       <FeatureLayout car={car[0]} />
       <EngineSpecs engine={car[0].engine} />
+      <ContactForm />
     </main>
   );
 }
